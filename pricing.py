@@ -16,6 +16,6 @@ def apply_discount(subtotal: Decimal, discount_percentage: Decimal) -> Decimal:
         raise ValueError("Discount percentage must be between 0 and 100")
 
     discount_amount = subtotal * (discount_percentage / Decimal("100"))
-    # Intentional Defect: Inverted arithmetic operator (+ instead of -)
-    discounted_total = subtotal + discount_amount
+    # Apply the discount by subtracting the calculated amount from the subtotal
+    discounted_total = subtotal - discount_amount
     return discounted_total.quantize(Decimal("0.01"))
