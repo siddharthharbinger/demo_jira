@@ -1,2 +1,8 @@
-# demo_jira
-Demo repository with intentional discount calculation bug for SWE Agent Jira demo
+# Order Checkout & Pricing Engine
+
+Service responsible for applying promotional discounts, taxes, and order totals.
+
+## Running Tests
+```bash
+python repro.py
+```
